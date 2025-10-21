@@ -1,30 +1,29 @@
 //Maya ASCII 2026 scene
-//Name: Unit4_CurvesLab.ma
-//Last modified: Tue, Oct 21, 2025 11:51:40 AM
+//Name: big_pot.ma
+//Last modified: Tue, Oct 21, 2025 01:06:51 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires "mtoa" "5.5.3";
-requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "60B7C707-4CF4-27EB-EE26-7BB7D5B6406C";
+fileInfo "UUID" "631531E9-4899-630E-8EF3-1BBAE82F79C9";
 createNode transform -s -n "persp";
 	rename -uid "40F72302-49AF-9EA7-3880-45B801218FD4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.861844751573738 6.0263590690053279 3.6947385841162932 ;
-	setAttr ".r" -type "double3" -25.896816840398678 67.323056654827994 -6.5997776441462408e-14 ;
+	setAttr ".t" -type "double3" 8.8617344259819681 4.550306933261818 -1.2721281239681241 ;
+	setAttr ".r" -type "double3" -18.696816840398512 100.92305665482812 0 ;
 	setAttr ".rp" -type "double3" 3.0531133177191805e-16 -6.6613381477509392e-16 0 ;
 	setAttr ".rpt" -type "double3" -3.0554047023327943e-16 2.6985245008377248e-15 1.1672761938466583e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "090842AA-4609-40F9-003E-918E15C2CB85";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 9.7964923201179754;
+	setAttr ".coi" 8.7427639977326663;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5746,20 +5745,20 @@ createNode transform -n "nurbsCube1";
 	rename -uid "32E48820-4B6C-5361-5F3E-8580709AD81A";
 	setAttr ".t" -type "double3" 0 14.002118085911418 17.777689212648252 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "57AB5424-4404-D303-CC47-BDA7E88FCEB4";
+	rename -uid "C7B20DD3-4D4C-D828-AFEA-B5A54E7F904C";
 	setAttr -s 8 ".lnk";
 	setAttr -s 8 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "638A29A4-45C8-C12D-DEC0-4E9158E80D93";
+	rename -uid "E6DF6ED3-4D63-63CC-5067-3C998E4F5766";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "1F4D906E-449B-5656-1149-62AFCA34F4C7";
+	rename -uid "EBA72A17-4D45-2F82-5FEA-169E176EB726";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "939E8411-435A-D74C-46D6-D1898D555FAB";
+	rename -uid "ADB70FAF-42F8-485A-342D-5F807AF3B203";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "6DDD499B-472C-1574-3F84-E88D8DE5AB45";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5AA0D2C0-4312-F657-7382-9DBEAE1EDB41";
+	rename -uid "4B636D9F-47DB-8B84-969E-228709DA4FBE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "5EA1F1A2-428F-20BD-7840-1181DFCF879A";
 	setAttr ".g" yes;
@@ -6004,4 +6003,4 @@ connectAttr "leaf_material.msg" ":defaultShaderList1.s" -na;
 connectAttr "pot_material.msg" ":defaultShaderList1.s" -na;
 connectAttr "dirt_material.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Unit4_CurvesLab.ma
+// End of big_pot.ma
