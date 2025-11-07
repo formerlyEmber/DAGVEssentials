@@ -1,9 +1,14 @@
 //Maya ASCII 2026 scene
 //Name: tavern.ma
-//Last modified: Sat, Nov 01, 2025 05:10:56 PM
+//Last modified: Thu, Nov 06, 2025 07:10:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "tav_table" -rfn "tav_tableRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_table.ma";
+file -rdi 1 -ns "tav_bench" -rfn "tav_benchRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_bench.ma";
+file -rdi 1 -ns "tav_bench1" -rfn "tav_benchRN1" -op "v=0;" -typ "mayaAscii"
+		 "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_bench.ma";
 file -r -ns "tav_table" -dr 1 -rfn "tav_tableRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_table.ma";
+file -r -ns "tav_bench" -dr 1 -rfn "tav_benchRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_bench.ma";
+file -r -ns "tav_bench1" -dr 1 -rfn "tav_benchRN1" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_bench.ma";
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires "mtoa" "5.5.3";
@@ -13,12 +18,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "BFE05A72-44C9-D2DA-02FC-9A8A3A559E52";
+fileInfo "UUID" "268921E2-448C-7AA7-6350-CFBA71673B96";
 createNode transform -s -n "persp";
 	rename -uid "1D35A8EC-4558-FAA1-F4B6-D89D1D7DF7B2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.0882076349941761 5.0267767721525338 7.8976535841441793 ;
-	setAttr ".r" -type "double3" -23.738352729604099 43.000000000001947 0 ;
+	setAttr ".t" -type "double3" 5.0569213579435637 1.5979697838183791 -10.35228297773784 ;
+	setAttr ".r" -type "double3" -6.3383527297152815 512.99999999979855 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "640EF0D6-40F8-794F-2EBC-EBAC047C51C9";
 	setAttr -k off ".v" no;
@@ -79,20 +84,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C7007ECA-415F-7779-C5AA-AA93F9F75035";
+	rename -uid "D6AA4E02-4B9A-3787-8D2E-5F9E88BF96F7";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3658B2AC-41E6-F50B-87CC-DD92130EF6A9";
+	rename -uid "94851A69-4651-4F95-BB3C-DEBCC4DC9F88";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "9E750B12-44F2-18D7-57D1-89916353BE34";
+	rename -uid "C5BDCE9E-46DD-92A9-2FCB-CDA1B2096CF2";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "35B09AF9-4A5B-ECEF-EABB-DB8CD2E4828B";
+	rename -uid "1B6E80C8-44AC-6040-DD56-17A3CC9C5816";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5A7E96C9-4151-933F-4EA6-5C8FBEF404BF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "37E9D9D0-4B07-0487-5A8D-3986D0EF77DB";
+	rename -uid "892E5800-4A78-9DE8-4295-28B1CA6E47BD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4505CD84-451F-3ED6-D6BA-02891D26F0BE";
 	setAttr ".g" yes;
@@ -154,6 +159,24 @@ createNode reference -n "tav_tableRN";
 		"tav_tableRN" 0;
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode reference -n "tav_benchRN";
+	rename -uid "67AB952B-43C9-534C-2E43-58B3D251FB62";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"tav_benchRN"
+		"tav_benchRN" 0
+		"tav_benchRN" 1
+		2 "|tav_bench:tav_bench" "translate" " -type \"double3\" 2.18365543035046361 0.84131645796522969 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "tav_benchRN1";
+	rename -uid "4F2EADC2-48F1-DFD1-07D6-0F89D16DA368";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"tav_benchRN1"
+		"tav_benchRN1" 0
+		"tav_benchRN1" 1
+		2 "|tav_bench1:tav_bench" "translate" " -type \"double3\" -2.16884278869408265 0.84131645796522969 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -172,7 +195,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
-	setAttr -s 2 ".r";
+	setAttr -s 4 ".r";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -180,10 +203,10 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	setAttr -s 3 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
