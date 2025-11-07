@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: tavern.ma
-//Last modified: Thu, Nov 06, 2025 07:10:41 PM
+//Last modified: Thu, Nov 06, 2025 07:27:10 PM
 //Codeset: 1252
 file -rdi 1 -ns "tav_table" -rfn "tav_tableRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_table.ma";
 file -rdi 1 -ns "tav_bench" -rfn "tav_benchRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_bench.ma";
@@ -18,20 +18,23 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "268921E2-448C-7AA7-6350-CFBA71673B96";
+fileInfo "UUID" "4E6D8A7E-494D-D3C8-DE1C-AC941550E58F";
 createNode transform -s -n "persp";
 	rename -uid "1D35A8EC-4558-FAA1-F4B6-D89D1D7DF7B2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.0569213579435637 1.5979697838183791 -10.35228297773784 ;
-	setAttr ".r" -type "double3" -6.3383527297152815 512.99999999979855 0 ;
+	setAttr ".t" -type "double3" 1.0844108594170301 4.4785896205408218 -10.193615545095266 ;
+	setAttr ".r" -type "double3" -20.592586959521736 173.96880071507491 0 ;
+	setAttr ".rp" -type "double3" 5.5511151231257827e-17 8.8817841970012523e-16 0 ;
+	setAttr ".rpt" -type "double3" -1.1574751370687586e-15 5.919371655668346e-17 -8.5173968722944099e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "640EF0D6-40F8-794F-2EBC-EBAC047C51C9";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 11.7360192556154;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 10.950002890216723;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
+	setAttr ".tp" -type "double3" 0.0074063208281947013 0.62724873217455457 1.7763568394002505e-15 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "944E538D-4632-2A61-4507-5D85B5A12697";
@@ -84,20 +87,20 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D6AA4E02-4B9A-3787-8D2E-5F9E88BF96F7";
+	rename -uid "B0670461-4777-587E-68C2-2894EB5229FF";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "94851A69-4651-4F95-BB3C-DEBCC4DC9F88";
+	rename -uid "F038C16D-4574-F1F0-413A-66994CB6F8FF";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C5BDCE9E-46DD-92A9-2FCB-CDA1B2096CF2";
+	rename -uid "BFA74952-4BDF-2836-A03A-AEAAD2F83D74";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "1B6E80C8-44AC-6040-DD56-17A3CC9C5816";
+	rename -uid "57BD10B9-4953-3C88-1BD9-D0AD6BE49B60";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5A7E96C9-4151-933F-4EA6-5C8FBEF404BF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "892E5800-4A78-9DE8-4295-28B1CA6E47BD";
+	rename -uid "663CAF17-4C29-465F-3B2E-0C85E6488BB9";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4505CD84-451F-3ED6-D6BA-02891D26F0BE";
 	setAttr ".g" yes;
@@ -165,7 +168,7 @@ createNode reference -n "tav_benchRN";
 		"tav_benchRN"
 		"tav_benchRN" 0
 		"tav_benchRN" 1
-		2 "|tav_bench:tav_bench" "translate" " -type \"double3\" 2.18365543035046361 0.84131645796522969 0";
+		2 "|tav_bench:tav_bench" "translate" " -type \"double3\" 2.18365543035046361 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "tav_benchRN1";
@@ -174,7 +177,7 @@ createNode reference -n "tav_benchRN1";
 		"tav_benchRN1"
 		"tav_benchRN1" 0
 		"tav_benchRN1" 1
-		2 "|tav_bench1:tav_bench" "translate" " -type \"double3\" -2.16884278869408265 0.84131645796522969 0";
+		2 "|tav_bench1:tav_bench" "translate" " -type \"double3\" -2.16884278869408265 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
@@ -207,6 +210,7 @@ select -ne :initialShadingGroup;
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
