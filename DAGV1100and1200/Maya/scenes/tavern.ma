@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: tavern.ma
-//Last modified: Thu, Dec 04, 2025 11:35:20 AM
+//Last modified: Fri, Dec 05, 2025 01:38:27 PM
 //Codeset: 1252
 file -rdi 1 -ns "tav_table" -rfn "tav_tableRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_table.ma";
 file -rdi 1 -ns "tav_bench" -rfn "tav_benchRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/DAGVEssentials/DAGV1100and1200/Maya//scenes/tav_bench.ma";
@@ -45,19 +45,19 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202507081222-4d6919b75c";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "19A7DCDF-4026-08EF-AFAA-289FAC27A009";
+fileInfo "UUID" "A1A68136-4C25-CD1D-0981-D787E25706C9";
 createNode transform -s -n "persp";
 	rename -uid "1D35A8EC-4558-FAA1-F4B6-D89D1D7DF7B2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.186374209692074 8.3450263519910894 4.7834548629716425 ;
-	setAttr ".r" -type "double3" -32.680089984566273 64.235255002550176 -7.3170524637141177e-15 ;
+	setAttr ".t" -type "double3" 6.3877142517523913 2.6775605729717258 1.5074635171160526 ;
+	setAttr ".r" -type "double3" -20.080089984566673 71.035255002550315 -4.8933673185258286e-15 ;
 	setAttr ".rp" -type "double3" 1.1102230246251565e-15 0 0 ;
 	setAttr ".rpt" -type "double3" 3.7649078266372511e-16 2.3200466403434287e-15 -7.8559446884727325e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "640EF0D6-40F8-794F-2EBC-EBAC047C51C9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 15.439101405806412;
+	setAttr ".coi" 7.7733320837392643;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5214,20 +5214,20 @@ createNode mesh -n "tav_modularFloorboardShape15" -p "tav_modularFloorboard15";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D99103DC-4A22-A6DA-8D60-D6BB5208CBE3";
-	setAttr -s 5 ".lnk";
-	setAttr -s 5 ".slnk";
+	rename -uid "9B3E7FB1-4C17-D941-2F2E-E28F482F333A";
+	setAttr -s 14 ".lnk";
+	setAttr -s 14 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "E738705B-41C3-B450-7912-45A9E56E9E1B";
+	rename -uid "88705DBF-4E59-3CD6-F292-D98985FC087F";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "44E64396-403D-60D8-DCAC-A99BC0038BAA";
+	rename -uid "9CF724AC-4294-126C-CCFF-A68FE0ACF2D5";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "76D97224-4696-B94C-90A3-71BA8814D018";
+	rename -uid "7ED1C92E-466E-D481-68CE-AE8A497C092B";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "5A7E96C9-4151-933F-4EA6-5C8FBEF404BF";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "5EDA2A9B-4E9B-EFEE-AB61-E5BC9B99681E";
+	rename -uid "9BDB1324-4248-7CEA-A239-DD928FF6C6C6";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4505CD84-451F-3ED6-D6BA-02891D26F0BE";
 	setAttr ".g" yes;
@@ -5354,46 +5354,48 @@ createNode reference -n "tav_mugRN";
 		
 		2 "|tav_mug:pCylinder3" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
-		2 "|tav_mug:tav_mug" "translate" " -type \"double3\" 0.6794987846272238 0.49197902440065677 -1.46832360380587801"
+		2 "|tav_mug:tav_mug1" "translate" " -type \"double3\" 0 1.53829794180501223 0"
 		
 		"tav_mugRN" 1
-		2 "|tav_mug:tav_mug1" "translate" " -type \"double3\" 0 1.53829794180501223 0";
+		2 "|tav_mug:tav_mug" "translate" " -type \"double3\" 0.6794987846272238 0.49197902440065677 -1.46832360380587801";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "tav_mugRN1";
 	rename -uid "8DB838BC-4628-36AE-87D1-529A6255891F";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"tav_mugRN1"
-		"tav_mugRN1" 4
+		"tav_mugRN1" 2
 		2 "|tav_mug1:pCylinder3" "translate" " -type \"double3\" 0.80590250826845644 0.49197902440065649 1.442719373158315"
 		
+		2 "|tav_mug1:tav_mug1" "translate" " -type \"double3\" 0 2.70091341430623055 0"
+		
+		"tav_mugRN1" 3
 		2 "|tav_mug1:tav_mug" "translate" " -type \"double3\" -0.7160719839817129 0.7174979722862358 -1.25707224305202336"
 		
 		2 "|tav_mug1:tav_mug" "rotate" " -type \"double3\" 95.40494178281892346 -2.60888649421863583 25.69157823133706842"
 		
-		2 "|tav_mug1:tav_mug" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		"tav_mugRN1" 1
-		2 "|tav_mug1:tav_mug1" "translate" " -type \"double3\" 0 2.70091341430623055 0";
+		2 "|tav_mug1:tav_mug" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "tav_mugRN2";
 	rename -uid "F3D53B34-4BBA-5FE1-FE1B-CFB6A35E3125";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"tav_mugRN2"
-		"tav_mugRN2" 6
+		"tav_mugRN2" 4
 		2 "|tav_mug2:pCylinder3" "translate" " -type \"double3\" -0.99234131882247745 0.72119104214496732 -0.65849821604863623"
 		
 		2 "|tav_mug2:pCylinder3" "rotate" " -type \"double3\" 96.29039401699884593 -0.69906447086229384 9.16597672264649432"
 		
 		2 "|tav_mug2:pCylinder3" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		
+		2 "|tav_mug2:tav_mug1" "translate" " -type \"double3\" 0 1.91183471950754225 0"
+		
+		"tav_mugRN2" 3
 		2 "|tav_mug2:tav_mug" "translate" " -type \"double3\" 0.70346045686290859 0.49197902440065677 0.94743951458244746"
 		
 		2 "|tav_mug2:tav_mug" "rotate" " -type \"double3\" 0 99.73808120998343441 0"
 		
-		2 "|tav_mug2:tav_mug" "rotatePivotTranslate" " -type \"double3\" 0 0 0"
-		"tav_mugRN2" 1
-		2 "|tav_mug2:tav_mug1" "translate" " -type \"double3\" 0 1.91183471950754225 0";
+		2 "|tav_mug2:tav_mug" "rotatePivotTranslate" " -type \"double3\" 0 0 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "tav_lanternRN";
@@ -5436,18 +5438,18 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 5 ".st";
+	setAttr -s 14 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 9 ".s";
+	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 6 ".u";
+	setAttr -s 18 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 12 ".r";
 select -ne :defaultTextureList1;
-	setAttr -s 15 ".tx";
+	setAttr -s 45 ".tx";
 select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
@@ -5455,7 +5457,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 22 ".dsm";
+	setAttr -s 19 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
